@@ -1,14 +1,65 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122931853-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122931853-1');
+  </script>
+
   <meta charset="utf-8">
-  <title>WeddingAppStatic</title>
+  <title>Lucas e Nicole</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style>
+    body {
+      background-color: #0e0e0e;
+    }
+
+    #loading {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      text-align: center;
+      margin-top: 45vh;
+    }
+  </style>
+
+  <script>
+    let staticLoaded = false;
+    let dynamicLoaded = true;
+
+    function refresh() {
+      if (staticLoaded && dynamicLoaded) {
+        document.querySelector('app-root').style.visibility = 'visible';
+        document.querySelector('#loading').style.display = 'none'
+      } else {
+        document.querySelector('app-root').style.visibility = 'hidden';
+        document.querySelector('#loading').style.display = 'block'
+      }
+    }
+
+    window.dynamicLoaded = function (value) {
+      dynamicLoaded = value;
+      refresh();
+    }
+  </script>
+
 </head>
-<body>
+
+<body onload="staticLoaded = true; refresh();">
+  <div id="loading">
+    <img src="assets/loading.svg">
+  </div>
   <app-root></app-root>
 </body>
+
 </html>

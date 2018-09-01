@@ -1,0 +1,173 @@
+  h1 {
+    font-family: 'Playlist Script', cursive;
+    font-size: 250%;
+    font-weight: normal;
+    margin-top: 50pt;
+  }
+  
+  p {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
+  
+  #invite-image {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  
+    width: 100%;
+    position: relative;
+  }
+  
+  #top-text {
+    position: absolute;
+    width: 100%;
+    padding-top: 12pt;
+  }
+  
+  p#family-name {
+    letter-spacing: 1pt;
+    font-size: 120%;
+  }
+  
+  p#invite-details {
+    font-weight: lighter;
+    margin-bottom: 0;
+  }
+  
+  h1#bride-groom-names {
+    margin-top: 0;
+    font-size: 350%;
+  }
+  
+  #ceremony, #party {
+    position: absolute;
+    bottom: 10%;
+    font-size: 70%;
+    letter-spacing: 0.3vw;
+  
+    color: rgb(224, 224, 224);
+    text-shadow: 0px 0px 10px #0e0e0e;
+  }
+  
+  #ceremony {
+    right: 53%;
+  }
+  
+  #party {
+    left: 53%;
+  }
+
+  #attendance {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  #attendance h1 {
+    font-size: 300%;
+  }
+
+  #attendance h1#confirm {
+    margin-bottom: 3%;
+  }
+
+  #attendance #disclaimer {
+    text-align: left;
+    margin: 0 0 3% 10%;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 80%;
+  }
+  
+  #attendance ul {
+    list-style-type: none;
+    text-align: left;
+    font-family: Amatic SC;
+    font-size: 200%;
+  
+    margin: auto;
+    padding: 0 10% 0 10%;
+    max-width: 700px;
+  }
+  
+  #attendance ul li {
+    position: relative;
+  }
+  
+  #attendance ul li div {
+    position: absolute;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #attendance ul li button {
+    width: 0.8em;
+    height: 0.8em;
+    background-color: transparent;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    margin-left: 0.2em;
+    cursor: pointer;
+  }
+  
+  #attendance ul li button.attend {
+    background-image: url(../../assets/icon-yes.svg);
+  }
+  
+  #attendance ul li button.not-attend {
+    background-image: url(../../assets/icon-no.svg);
+  }
+  
+  #attendance ul li button {
+    opacity: 0.2;
+  }
+  
+  #attendance ul li button:hover {
+    opacity: 0.5;
+  }
+  
+  #attendance ul li button.selected {
+    opacity: 1;
+  }
+
+  #attendance ul li button.selected:hover {
+    opacity: 0.9;
+  }
+
+  #signature {
+    font-weight: lighter;
+    font-size: 70%;
+    margin-top: 60pt;
+    margin-bottom: 30pt;
+    text-transform: uppercase;
+    line-height: 16pt;
+  }
+
+  #gifts-text {
+    margin: 0 15pt;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #invite-image {
+      background-image:
+        linear-gradient(to top, rgb(14, 14, 14), rgba(14,14,14,0) 33%),
+        url('../../assets/background-picture.jpg');
+      
+      padding-bottom: 138%;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    #invite-image {
+      background-image:
+        linear-gradient(to top, rgb(14, 14, 14), rgba(14,14,14,0) 33%),
+        linear-gradient(to right, rgb(14, 14, 14), rgba(14,14,14,0), rgba(14,14,14,0), rgb(14,14,14)),
+        url('../../assets/background-picture-wide.jpg');
+      
+      padding-bottom: 66%;
+    }
+  }

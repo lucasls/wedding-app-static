@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css/normalize.css';
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Oswald:200,400');
+
+@font-face {
+  font-family: "Playlist Script";
+  src: url("assets/playlist-script-webfont.eot");
+  src: 
+    url("assets/playlist-script-webfont.woff") format("woff"),
+    url("assets/playlist-script-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url("assets/fa-solid-900.eot");
+  src: 
+    url("assets/fa-solid-900.woff") format("woff"),
+    url("assets/fa-solid-900.ttf") format("truetype");
+}
+
+body {
+  padding: 0;
+  background-color: #0e0e0e;
+  font-family: 'Oswald', sans-serif;
+}
+
+a, a:link, a:hover, a:focus, a:active, a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a[target="_blank"] .ext-icon {
+  position: relative;
+}
+
+a[target="_blank"] .ext-icon:after {
+  font-family: 'FontAwesome';
+  content: " \f35d";
+  position: absolute;
+  font-size: 65%;
+}
+
+app-root {
+  visibility: hidden;
+  color: rgb(224, 224, 224);
+  max-width: 1300px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 3.88vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    font-size: 15pt;
+  }
+}

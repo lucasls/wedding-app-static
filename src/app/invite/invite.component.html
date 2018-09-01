@@ -1,0 +1,104 @@
+<div id="invite-image">
+  <div id="top-text">
+    <p id="family-name">{{family.message}}</p>
+    <p id="invite-details">
+      Convidamos {{family.single ? "você" : "vocês"}} para o nosso casamento
+      <br> dia 22 de Setembro às 16 horas
+    </p>
+    <h1 id="bride-groom-names">
+      <a target="_blank" href="http://sites.icasei.com.br/lueni">Lucas e Nicole</a>
+    </h1>
+  </div>
+  <div id="ceremony">
+    <p>
+      <a target="_blank" href="https://www.google.com/maps/place/data=!3m1!4b1!4m5!3m4!1s0x94c8c6034dc5c679:0xef5f166569ff1ebe!8m2!3d-22.8888317!4d-47.0677836">
+        <strong>Cerimônia
+          <span class="ext-icon"></span>
+        </strong>
+      </a>
+    </p>
+    <p>
+      <a target="_blank" href="https://www.google.com/maps/place/data=!3m1!4b1!4m5!3m4!1s0x94c8c6034dc5c679:0xef5f166569ff1ebe!8m2!3d-22.8888317!4d-47.0677836">
+        Nsa. Sra. de Lourdes
+      </a>
+    </p>
+    <p>
+      <a target="_blank" href="https://www.google.com/maps/place/data=!3m1!4b1!4m5!3m4!1s0x94c8c6034dc5c679:0xef5f166569ff1ebe!8m2!3d-22.8888317!4d-47.0677836">
+        Rua Gonçalves César, 79
+        <br> Jd. Guanabara, Campinas
+      </a>
+    </p>
+  </div>
+  <div id="party">
+    <p>
+      <a target="_blank" href="https://www.google.com/maps/place/data=!3m1!4b1!4m5!3m4!1s0x94c8a2d491ed3189:0x2d12d47a3cb49439!8m2!3d-22.8490265!4d-47.2946935">
+        <strong>Comemoração
+          <span class="ext-icon"></span>
+        </strong>
+      </a>
+    </p>
+    <p>
+      <a target="_blank" href="https://www.google.com/maps/place/data=!3m1!4b1!4m5!3m4!1s0x94c8a2d491ed3189:0x2d12d47a3cb49439!8m2!3d-22.8490265!4d-47.2946935">
+        Entre Verdes Eventos
+      </a>
+    </p>
+    <p>
+      <a target="_blank" href="https://www.google.com/maps/place/data=!3m1!4b1!4m5!3m4!1s0x94c8a2d491ed3189:0x2d12d47a3cb49439!8m2!3d-22.8490265!4d-47.2946935">
+        Rua Jataí, 184
+        <br> Jd. São Bento, Sumaré
+      </a>
+    </p>
+  </div>
+</div>
+<div id="attendance">
+  <h1 id="confirm">
+    Confirme sua presença
+  </h1>
+  <div id="disclaimer">
+    Adultos e crianças maiores de 8 anos
+  </div>
+  <ul>
+    <li *ngFor="let guest of family.members">{{guest.name}}
+      <div>
+        <button [ngClass]="{'attend': true, 'selected': guest.going === true}" (click)="toggleMemberGoing(family.code, guest)"></button>
+        <button [ngClass]="{'not-attend': true, 'selected': guest.going === false}" (click)="toggleMemberNotGoing(family.code, guest)"></button>
+      </div>
+    </li>
+  </ul>
+
+  <h1>
+    Quem já confirmou presença
+  </h1>
+  <ul *ngIf="guestsGoing.length > 0">
+    <div *ngFor="let group of guestsGoing">
+      <li>
+        <strong>({{group.name}})</strong>
+      </li>
+      <li *ngFor="let guest of group.guests">{{guest.name}}</li>
+    </div>
+  </ul>
+  <div *ngIf="guestsGoing.length == 0">
+    Ninguém ainda, seja o primeiro!
+  </div>
+
+  <h1>
+    <a target="_blank" href="https://sites.icasei.com.br/lueni/pt_br/store/9/1/1">
+      Lista de presentes
+    </a>
+  </h1>
+  <div id="gifts-text">
+    <a target="_blank" href="https://sites.icasei.com.br/lueni/pt_br/store/9/1/1">
+      Clique aqui para acessar nossa lista de presentes e nos ajude a ter uma lua de mel inesquecível &lt;3&nbsp;
+      <span class="ext-icon"></span>
+    </a>
+  </div>
+  <div>
+
+  </div>
+
+  <p id="signature">
+    Designed with love by Nicole
+    <br> Developed with love (and pain) by Lucas
+  </p>
+
+</div>

@@ -20,7 +20,10 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@types/facebook-js-sdk": "^2.8.4",
     "core-js": "^2.5.4",
+    "ngx-facebook": "^2.4.0",
+    "normalize.css": "^8.0.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
